@@ -14,6 +14,7 @@ def joyCallback(msg):
 		if msg.buttons[2] == 1:
 			test_writer.writerow([pose.pose.position.x, pose.pose.position.y, pose.pose.position.z])
 			pose_pub.publish(pose)
+			rospy.sleep(0.25)
 
 def poseCallback(msg):
 	global pose
